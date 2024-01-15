@@ -7,7 +7,7 @@ function HomePage() {
 	const { user, setuser } = useContext(AppState);
 	const [questionList, setQuestionList] = useState([]);
 	const token = localStorage.getItem("token");
-	// const username = localStorage.getItem("user_name");
+	const username = localStorage.getItem("user_name");
 
 	async function fetchAllQuestions() {
 		try {
@@ -37,7 +37,7 @@ function HomePage() {
 						Ask Question
 					</a>
 				</div>
-				<h5 className="">Welcome:{user.username}</h5>
+				<h5 className="">Welcome : {username}</h5>
 			</div>
 			<div className="mx-30">
 				<input

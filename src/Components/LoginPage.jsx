@@ -29,6 +29,7 @@ function Login({ toggle }) {
 			alert("login successfull,");
 
 			localStorage.setItem("token", data.token);
+			localStorage.setItem("user_name", data.username);
 			navigate("/questions");
 			console.log(data);
 		} catch (error) {
